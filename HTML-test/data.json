@@ -1,0 +1,14 @@
+[
+    {
+        "text" : "Shrenik Reddy",
+        "password" : "Wenable$1234",
+        "email" : "shrenik.reddy@wenable.com",
+        "number" : 15
+    },
+    {
+        "text" : "Raju Yadav",
+        "password" : "Wenable$12345",
+        "email" : "raju.yadav@wenable.com",
+        "number" : 20
+    }
+]

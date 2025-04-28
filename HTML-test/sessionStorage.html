@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+<script>
+function clickCounter() {
+  const x = document.getElementById("result");
+  if (typeof(Storage) !== "undefined") {
+    if (sessionStorage.clickcount) {
+      sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+    } else {
+      sessionStorage.clickcount = 1;
+    }
+    x.innerHTML = "Click Count:" + sessionStorage.clickcount  ;
+  } else {
+    x.innerHTML = "Sorry, no Web storage support!";
+  }
+}
+</script>
+</head>
+<body>
+
+<h1>sessionStorage</h1>
+
+<button onclick="clickCounter()" type="button">Click</button>
+<p id="result"></p>
+
+</body>
+</html>
+

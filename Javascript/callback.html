@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p id="text">Loading</p>
+    <script>
+        function updateText(callback) {
+            setTimeout(() => {
+                document.getElementById("text").innerText = "Data loaded";
+                callback();
+            }, 2000);
+        }
+
+        updateText(() => console.log("Text updated"));
+    </script>
+</body>
+</html>

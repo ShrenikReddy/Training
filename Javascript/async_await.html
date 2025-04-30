@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p id="data">Loading</p>
+    <script>
+        async function getData() {
+            let response = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+            let data = await response.json();
+            document.getElementById("data").innerText = data.title;
+        }
+
+        getData();
+    </script>
+</body>
+</html>

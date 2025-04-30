@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Operations</title>
+</head>
+<body>
+    <script>
+   
+        let person = {
+            name: "Shrenik Reddy",
+            age: 21,
+            city: "Hyderabad",
+            skills: ["JavaScript", "React", "Node.js"],
+        };
+
+        console.log("Name:", person.name);
+        console.log("Skills:", person.skills[1]); 
+        //Adding property
+        person.country = "India";
+
+        //Removing property
+        delete person.city;
+
+        //Updating object property
+        person.age = 22;
+
+        //Looping 
+        for (let key in person) {
+            console.log(`${key}: ${person[key]}`);
+        }
+
+        //Destructuring an object
+        let { name, age,} = person;
+        console.log(`Name: ${name}, Age: ${age}`);
+
+        //Checking
+        console.log("Has city?", person.hasOwnProperty("city"));
+
+    </script>
+</body>
+</html>

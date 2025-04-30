@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+    <style>
+        #demo {
+            color: blue;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p id="demo"></p>
+    <button onclick="changeContent()">Change Text</button>
+    <button onclick="changeColor()">Change Color</button>
+
+    <script>
+        function changeContent() {
+            document.getElementById("demo").innerText = "Text changed";
+        }
+        
+        function changeColor() {
+            document.getElementById("demo").style.color = "red";
+        }
+    </script>
+</body>
+</html>

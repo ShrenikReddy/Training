@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Events</title>
+</head>
+<body>
+    <label for="name">Enter Name:</label>
+    <input type="text" id="name">
+
+    <p id="message"></p>
+
+    <script>
+        let nameInput = document.getElementById("name");
+        let message = document.getElementById("message");
+
+        nameInput.addEventListener("focus", function() {
+            message.innerText = "Input field is active.";
+            message.style.color = "green";
+        });
+
+        nameInput.addEventListener("blur", function() {
+            message.innerText = "Input field is inactive.";
+            message.style.color = "red";
+        });
+
+        nameInput.addEventListener("change", function() {
+            alert("Value changed to: " + nameInput.value);
+        });
+    </script>
+</body>
+</html>

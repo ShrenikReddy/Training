@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p id="status">Fetching data</p>
+    <script>
+        function fetchData() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve("Data fetched");
+                }, 2000);
+            });
+        }
+
+        fetchData().then((message) => {
+            document.getElementById("status").innerText = message;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click & Mouse Events</title>
+    <style>
+        #box {
+            width: 150px;
+            height: 150px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 150px;
+            font-size: 18px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+
+    <script>
+        let box = document.getElementById("box");
+
+        box.addEventListener("click", function() {
+            alert("Box clicked!");
+        });
+
+        box.addEventListener("mouseover", function() {
+            box.style.backgroundColor = "yellow";
+        });
+
+        box.addEventListener("mouseout", function() {
+            box.style.backgroundColor = "lightblue";
+        });
+    </script>
+</body>
+</html>

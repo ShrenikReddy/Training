@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrows</title>
+    <button id="btn"></button>
+    <p id="demo"></p>
+</head>
+<body>
+    
+</body>
+<script>
+    let hello = "";
+    
+    hello = () =>{
+      document.getElementById("demo").innerHTML += this;
+    }
+        window.addEventListener("load", hello);
+    
+    document.getElementById("btn").addEventListener("click", hello);
+    </script>
+</html>

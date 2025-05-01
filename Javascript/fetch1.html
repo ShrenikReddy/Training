@@ -3,10 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API </title>
 </head>
 <body>
-    <ul id="dataList"></ul>
-    <script src="data.js"></script>
-    <script src="post.js"></script>
+    <button onclick="fetchData()">Fetch</button>
+    <div id="output"></div>
+
+    <script>
+        function fetchData() {
+            fetch('https://reqres.in/api/users/2')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('output').innerHTML = `<h3>${data.title}</h3><p>${data.body}</p>`;
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        }
+    </script>
 </body>
 </html>

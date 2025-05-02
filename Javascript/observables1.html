@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RxJS</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/7.8.1/rxjs.umd.min.js"></script>
+</head>
+<body>
+
+  <button id="click">button</button>
+  <p id="output"></p>
+
+  <script>
+    const { fromEvent } = rxjs;
+
+    //Selectingt the button element
+    const button = document.getElementById('click');
+    const output = document.getElementById('output');
+
+    //Observable for button clicks
+    const clickObservable = fromEvent(button, 'click');
+
+    //Creating subscriber
+    clickObservable.subscribe(() => {
+      output.textContent = "Button Clicked";
+    });
+  </script>
+
+</body>
+</html>

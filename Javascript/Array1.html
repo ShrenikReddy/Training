@@ -14,6 +14,11 @@
         numbers.pop();
         numbers.shift();
         numbers.splice(1, 1); 
+
+        //Inserting elements 40 and 50
+        numbers.splice(2,0,40,50)
+        console.log("Inserted 40 and 50",numbers);
+        console.log("Index of 40:",numbers.indexOf(40),"Index of 50:",numbers.indexOf(50));
         //Sorting and Reversing
         numbers.sort((a, b) => a - b); 
         numbers.reverse(); 
@@ -27,6 +32,11 @@
 
         // 7. Iterating over the array
         numbers.forEach(num => console.log("Number:", num));
+
+        //some() method
+        let hasLargeNumber = numbers.some(num => num > 10);
+        console.log("Numbers greater than 10:", hasLargeNumber);
+        
 
         console.log("Final Numbers:", numbers);
         console.log("Filtered Numbers (>10):", filteredNumbers);

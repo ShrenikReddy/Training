@@ -1,32 +1,4 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-
-@Component({
-  selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
-})
-export class AppComponent {
-  title = 'angular-common';
-}
-import { Component } from '@angular/core';
-import { TestComponent } from "../test/test.component";
-
-@Component({
-  selector: 'app-ng-on-changes',
-  imports: [TestComponent],
-  templateUrl: './ng-on-changes.component.html',
-  styleUrl: './ng-on-changes.component.css'
-})
-export class NgOnChangesComponent {
-  inputValue: string = 'Initial Value';
-  updateValue() {
-    this.inputValue = "App Component";
-  }
-
-  // constructor(){
-  //   console.log('constructor called', this.inputValue);
-  // }
-
-}
+<h1>Component Creation hook</h1>
+<button (click)="updateValue()">Update Value </button>
+<app-test [inputValue]="inputValue" ; ngOnChanges(changes: SimpleChanges): void>
+</app-test>
